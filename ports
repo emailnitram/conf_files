@@ -1,0 +1,13 @@
+port install bash-completion
+port install git-core
+port install wget
+port install dos2unix
+port install ImageMagick
+port install qt4-mac
+port install nodejs
+port install mongodb
+port install memcached
+port install redis
+port install lynx
+port install coffee-script
+port install tmux

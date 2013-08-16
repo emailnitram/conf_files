@@ -1,0 +1,15 @@
+#!/bin/bash
+
+function pretty_git_log() {
+
+HASH="%C(bold yellow)%h%C(reset)"
+RELATIVE_TIME="%C(bold green)%ar%C(reset)"
+AUTHOR="%C(bold blue)%an%C(reset)"
+REFS="%C(bold red)%d%C(reset)"
+SUBJECT="%s"
+
+FORMAT="$HASH{$RELATIVE_TIME{$AUTHOR{$REFS $SUBJECT"
+  git log --graph --pretty="tformat:$FORMAT" $* |
+  column -t -s '{' | 
+  less -FXRS
+}

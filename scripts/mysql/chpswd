@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PATH=$PATH:/usr/local/mysql/bin
+
+read    -p "developer username: " USER
+read -s -p "developer password: " PSWD
+echo
+read -s -p "root mysql password: " ROOTPSWD
+echo
+
+mysql      -u root -p$ROOTPSWD -e "update user set Password=PASSWORD('$PSWD') where User='$USER';" mysql 2>/dev/null
+mysqladmin -u root -p$ROOTPSWD reload 2>/dev/null
+

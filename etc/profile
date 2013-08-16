@@ -1,0 +1,23 @@
+# System-wide .profile for sh(1)
+
+if [ -x /usr/libexec/path_helper ]; then
+	eval `/usr/libexec/path_helper -s`
+fi
+
+if [ "${BASH-no}" != "no" ]; then
+	[ -r /etc/bashrc ] && . /etc/bashrc
+fi
+
+for i in /etc/profile.d/*.sh ; do
+    if [ -r "$i" ]; then
+        . "$i"
+    fi
+done
+
+unset i
+
+# set bash to use vi mode for editing
+set -o vi
+# set some shell options
+shopt -s cmdhist
+shopt -s histappend

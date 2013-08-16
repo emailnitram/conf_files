@@ -1,0 +1,18 @@
+
+#################################################################
+# @HOME config
+#################################################################
+
+Host mercury
+User pix
+
+Host saturn
+User root
+
+Host pluto
+ForwardX11 yes
+
+Host fredx
+Hostname hulk.dreamhost.com
+User fredx
+

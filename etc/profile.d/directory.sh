@@ -1,0 +1,5 @@
+alias dir='ls -Fl'
+alias l.='ls -Fld .*'
+alias la='ls -Fa'
+alias ll='ls -Fl'
+alias ls='ls -F'

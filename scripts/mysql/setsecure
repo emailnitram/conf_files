@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PATH=$PATH:/usr/local/mysql/bin
+
+read -s -p "Please enter a root password for mysql: " PSWD
+echo
+mysql -u root -e "delete from user where User='';" mysql
+mysql -u root -e "update user set Password=PASSWORD('$PSWD') where User='root';" mysql
+mysqladmin -u root reload

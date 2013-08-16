@@ -1,0 +1,28 @@
+
+#################################################################
+# @WORK config
+#################################################################
+
+Host earth
+User fred
+Hostname earth.changeme.net
+
+Host jupiter
+User fred
+Hostname jupiter.changeme.net
+
+Host titan
+User fred
+Hostname titan.changeme.net
+
+Host pluto
+User fred
+ForwardX11 yes
+Hostname pluto.changeme.net
+
+Host fas.net
+User fred
+Port 1922
+ForwardX11 yes
+Hostname changeme.net
+
